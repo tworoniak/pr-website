@@ -28,13 +28,30 @@
 
 .item {
   display: grid;
-  grid-template-columns: 160px 1fr auto;
-  gap: 1rem;
-  align-items: start;
-  padding: 1.25rem 1.5rem;
+  grid-template-columns: 240px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.25rem;
+  border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.03);
+}
+
+.thumb {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 1rem;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.contentWrap {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
 }
 
 .date {
@@ -46,7 +63,7 @@
 .content {
   h3 {
     margin: 0 0 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     line-height: 1.2;
   }
 
@@ -72,5 +89,9 @@
 @media (max-width: 900px) {
   .item {
     grid-template-columns: 1fr;
+  }
+
+  .thumb {
+    min-height: 240px;
   }
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Header from '@/components/layout/Header';
@@ -10,6 +11,7 @@ import {
   getPressReleaseBySlug,
   pressReleases,
 } from '@/data/press';
+import styles from './PressDetailPage.module.scss';
 
 type PressDetailPageProps = {
   params: Promise<{
@@ -38,6 +40,16 @@ export async function generateMetadata({
   return {
     title: `${article.title} | Press`,
     description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      images: [
+        {
+          url: article.image,
+          alt: article.imageAlt,
+        },
+      ],
+    },
   };
 }
 
@@ -63,6 +75,20 @@ export default async function PressDetailPage({
           description={article.excerpt}
           maxWidth='lg'
         />
+
+        <section className={styles.mediaSection}>
+          <Container>
+            <div className={styles.imageWrap}>
+              <Image
+                src={article.image}
+                alt={article.imageAlt}
+                fill
+                priority
+                sizes='(max-width: 1200px) 100vw, 1200px'
+              />
+            </div>
+          </Container>
+        </section>
 
         <section className='pageSection'>
           <Container>

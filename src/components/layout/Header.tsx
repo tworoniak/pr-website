@@ -10,6 +10,7 @@ const navItems = [
   { href: '/services', label: 'Services' },
   { href: '/roster', label: 'Roster' },
   { href: '/press', label: 'Press' },
+  { href: '/media-kit', label: 'Media Kit' },
   { href: '/contact', label: 'Contact' },
 ];
 
