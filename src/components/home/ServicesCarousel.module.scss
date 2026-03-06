@@ -1,0 +1,22 @@
+.section {
+  padding: 4rem 0;
+}
+
+.heading {
+  max-width: 52rem;
+  margin-bottom: 1.75rem;
+
+  h2 {
+    margin: 0.35rem 0 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+  }
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

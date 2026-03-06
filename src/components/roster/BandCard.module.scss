@@ -1,0 +1,39 @@
+.card {
+  overflow: hidden;
+  height: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.content {
+  padding: 1rem 1rem 1.25rem;
+
+  h3 {
+    margin: 0.35rem 0 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+}
+
+.genre {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
