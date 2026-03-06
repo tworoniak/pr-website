@@ -7,6 +7,8 @@ import ServicesCarousel from '@/components/home/ServicesCarousel';
 import RosterCarousel from '@/components/home/RosterCarousel';
 import TestimonialsGrid from '@/components/home/TestimonialsGrid';
 import CTASection from '@/components/home/CTASection';
+// import { Scroll } from 'lucide-react';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 
 export default function HomePage() {
   return (
@@ -22,6 +24,7 @@ export default function HomePage() {
         <CTASection />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
