@@ -39,3 +39,14 @@ section {
 .pageSection {
   padding: 1rem 0 5rem;
 }
+
+.prose {
+  max-width: 52rem;
+
+  p {
+    margin: 0 0 1.25rem;
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 1.05rem;
+  }
+}
