@@ -23,7 +23,7 @@ export default function PressReleaseList() {
               </div>
 
               <div className={styles.action}>
-                <Link href={item.href}>Read more</Link>
+                <Link href={`/press/${item.slug}`}>Read more</Link>
               </div>
             </article>
           ))}
