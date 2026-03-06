@@ -20,6 +20,7 @@ export default function Footer() {
           <Link href='/services'>Services</Link>
           <Link href='/roster'>Roster</Link>
           <Link href='/press'>Press</Link>
+          <Link href='/media-kit'>Media Kit</Link>
           <Link href='/contact'>Contact</Link>
         </nav>
       </Container>

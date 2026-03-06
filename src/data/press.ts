@@ -12,6 +12,8 @@ export type PressReleaseItem = {
   date: string;
   title: string;
   excerpt: string;
+  image: string;
+  imageAlt: string;
   content: string[];
 };
 
@@ -55,6 +57,8 @@ export const pressReleases: PressReleaseItem[] = [
     title: 'Obsidian Throne Announces New Album and Lead Single',
     excerpt:
       'The band begins its next campaign cycle with a new single, updated visuals, and a full-length announcement.',
+    image: '/images/press/band-1.jpg',
+    imageAlt: 'Obsidian Throne promotional image for new album campaign',
     content: [
       'Obsidian Throne has announced its upcoming full-length album, launching the campaign with a powerful lead single and a refreshed visual identity.',
       'The rollout is designed to build momentum across editorial coverage, streaming discovery, and fan engagement, with a focus on targeted media relationships and high-impact story framing.',
@@ -68,6 +72,8 @@ export const pressReleases: PressReleaseItem[] = [
     title: 'Grave Static Confirms Spring Tour Dates',
     excerpt:
       'A targeted live campaign supporting new material and expanded regional press outreach.',
+    image: '/images/press/band-1.jpg',
+    imageAlt: 'Grave Static band image tied to spring tour announcement',
     content: [
       'Grave Static has confirmed a new run of spring tour dates in support of the band’s latest material.',
       'The campaign is structured to support both ticket awareness and broader artist visibility, with regional press outreach, preview coverage, and live-focused story angles.',
@@ -81,6 +87,8 @@ export const pressReleases: PressReleaseItem[] = [
     title: 'Serpent Choir Signs With New Label Partner',
     excerpt:
       'A new chapter for the band with strategic positioning around the signing announcement and next release.',
+    image: '/images/press/band-1.jpg',
+    imageAlt: 'Serpent Choir press photo for label signing announcement',
     content: [
       'Serpent Choir has officially signed with a new label partner, marking the start of a major new chapter for the band.',
       'The announcement campaign centers on positioning the signing as both a milestone and a launch point for the next creative era, supported by messaging development and targeted press outreach.',
@@ -94,6 +102,8 @@ export const pressReleases: PressReleaseItem[] = [
     title: 'Vanta Collapse Releases New Visual and Campaign Assets',
     excerpt:
       'A visual-forward release strategy built to support long-tail media attention and audience growth.',
+    image: '/images/press/band-1.jpg',
+    imageAlt: 'Vanta Collapse campaign image featuring updated visual assets',
     content: [
       'Vanta Collapse has unveiled a new suite of visual assets as part of its current campaign strategy.',
       'The rollout emphasizes strong visual identity, continuity across platforms, and a release framework that supports both immediate attention and long-term discoverability.',
