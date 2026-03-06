@@ -33,14 +33,10 @@
     list-style: none;
   }
 
-  a {
-    font-size: 0.95rem;
-    opacity: 0.85;
-    transition: opacity 0.2s ease;
-
-    &:hover {
-      opacity: 1;
-    }
+  li {
+    display: flex;
+    align-items: center;
+    min-height: 76px;
   }
 }
 

@@ -49,11 +49,19 @@
     list-style: none;
   }
 
-  a {
+  li :global(a) {
     display: block;
-    padding: 0.95rem 0.25rem;
+    padding: 0.95rem 0.25rem 1.1rem;
     font-size: 1.15rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  li :global(a[aria-current='page']) {
+    opacity: 1;
+  }
+
+  li :global(a[aria-current='page']::after) {
+    bottom: 0.45rem;
   }
 }
 

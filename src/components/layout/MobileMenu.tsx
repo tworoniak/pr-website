@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import NavLink from './NavLink';
 import styles from './MobileMenu.module.scss';
 
 const navItems = [
@@ -50,9 +51,11 @@ export default function MobileMenu() {
           <ul>
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} onClick={closeMenu}>
-                  {item.label}
-                </Link>
+                <NavLink
+                  href={item.href}
+                  label={item.label}
+                  onClick={closeMenu}
+                />
               </li>
             ))}
           </ul>

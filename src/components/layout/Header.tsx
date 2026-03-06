@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Container from './Container';
 import MobileMenu from './MobileMenu';
+import NavLink from './NavLink';
 import styles from './Header.module.scss';
 
 const navItems = [
@@ -24,7 +25,7 @@ export default function Header() {
           <ul>
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <NavLink href={item.href} label={item.label} />
               </li>
             ))}
           </ul>

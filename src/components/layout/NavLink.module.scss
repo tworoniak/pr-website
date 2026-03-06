@@ -1,0 +1,28 @@
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.82;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.active {
+  opacity: 1;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.45rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #fff;
+}
