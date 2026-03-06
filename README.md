@@ -147,3 +147,53 @@ Files are served from:
     public/media-kit/
 
 ---
+
+## 📬 Contact Form
+
+The contact form posts to:
+
+    /api/contact
+
+The API route:
+
+- validates input
+- sends email via Resend
+- returns success/error status
+
+Environment variables required:
+
+    RESEND_API_KEY=
+    CONTACT_TO_EMAIL=
+    CONTACT_FROM_EMAIL=
+
+---
+
+## 📦 Dependencies
+
+Main dependencies:
+
+- next
+- react
+- typescript
+- sass
+- swiper
+- lucide-react
+- framer-motion
+- resend
+
+---
+
+## 📈 Future Improvements
+
+Potential enhancements for the project:
+
+- MDX-powered press articles
+- CMS integration (Sanity / Contentful)
+- artist roster detail pages
+- media kit asset previews
+- press archive search/filter
+- animated statistics
+- social media integrations
+- Open Graph dynamic image generation
+
+---
