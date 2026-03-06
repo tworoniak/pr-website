@@ -1,4 +1,4 @@
-# 🎤 Antihero PR Website
+# 🎤 Antihero PR Website v1.0
 
 A modern public relations agency website built with Next.js, TypeScript, and Sass.
 The site showcases services, artist roster, press coverage, downloadable media assets, and a working contact form.
