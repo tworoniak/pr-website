@@ -40,6 +40,8 @@
   justify-content: space-between;
   min-height: calc(100dvh - 76px);
   padding: 1.5rem 1rem 2rem;
+  background: rgba(11, 11, 16, 0.92);
+  backdrop-filter: blur(12px);
 
   ul {
     display: grid;
