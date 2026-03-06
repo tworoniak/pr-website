@@ -1,0 +1,48 @@
+.section {
+  padding: 4rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.kicker {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.left h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.right {
+  p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

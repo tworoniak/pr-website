@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Container from './Container';
+import MobileMenu from './MobileMenu';
 import styles from './Header.module.scss';
 
 const navItems = [
@@ -29,9 +30,12 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Link href='/contact' className={styles.cta}>
-          Start a Campaign
-        </Link>
+        <div className={styles.actions}>
+          <Link href='/contact' className={styles.cta}>
+            Start a Campaign
+          </Link>
+          <MobileMenu />
+        </div>
       </Container>
     </header>
   );
