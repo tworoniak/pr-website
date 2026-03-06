@@ -5,6 +5,7 @@ import LogoStrip from '@/components/home/LogoStrip';
 import AboutPreview from '@/components/home/AboutPreview';
 import ServicesCarousel from '@/components/home/ServicesCarousel';
 import RosterCarousel from '@/components/home/RosterCarousel';
+import TestimonialsGrid from '@/components/home/TestimonialsGrid';
 import CTASection from '@/components/home/CTASection';
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
         <AboutPreview />
         <ServicesCarousel />
         <RosterCarousel />
+        <TestimonialsGrid />
         <CTASection />
       </main>
       <Footer />
