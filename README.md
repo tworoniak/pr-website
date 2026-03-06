@@ -57,3 +57,93 @@ Coming soon.
 - Next.js next/image
 
 ---
+
+## 📂 Project Structure
+
+```txt
+src
+├─ app
+│  ├─ about
+│  ├─ contact
+│  ├─ media-kit
+│  ├─ press
+│  │  └─ [slug]
+│  ├─ roster
+│  ├─ services
+│  └─ api
+│     └─ contact
+│
+├─ components
+│  ├─ contact
+│  ├─ home
+│  ├─ layout
+│  ├─ media-kit
+│  ├─ press
+│  ├─ roster
+│  ├─ services
+│  └─ shared
+│
+├─ data
+│  ├─ mediaKit.ts
+│  ├─ press.ts
+│  ├─ roster.ts
+│  └─ services.ts
+│
+├─ styles
+│
+public
+├─ images
+│  ├─ bands
+│  └─ press
+└─ media-kit
+```
+
+## 📰 Press System
+
+Press releases are stored as structured data:
+
+    src/data/press.ts
+
+Each entry contains:
+
+- slug
+- title
+- date
+- excerpt
+- featured image
+- article content
+
+Dynamic pages are generated using:
+
+    generateStaticParams()
+
+Resulting routes look like:
+
+    /press/obsidian-throne-announces-new-album
+    /press/grave-static-confirms-spring-tour
+
+Each article includes:
+
+- featured image
+- article body
+- previous/next navigation
+- back-to-press link
+- SEO metadata
+
+---
+
+## 📦 Media Kit
+
+The Media Kit page provides resources for journalists and partners:
+
+- downloadable PDF media kit
+- logo packs
+- press photos
+- approved company boilerplate
+- quick company facts
+
+Files are served from:
+
+    public/media-kit/
+
+---
