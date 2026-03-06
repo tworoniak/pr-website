@@ -1,0 +1,40 @@
+.section {
+  padding: 5rem 0 2rem;
+}
+
+.inner {
+  h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 6vw, 4.9rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+}
+
+.sm {
+  max-width: 38rem;
+}
+
+.md {
+  max-width: 48rem;
+}
+
+.lg {
+  max-width: 60rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.description {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
