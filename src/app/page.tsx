@@ -23,7 +23,6 @@ export const metadata = buildSEO({
 export default function HomePage() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <FadeIn y={16}>
@@ -49,7 +48,7 @@ export default function HomePage() {
           <CTASection />
         </FadeIn>
       </main>
-      <Footer />
+
       <ScrollToTopButton />
     </>
   );

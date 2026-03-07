@@ -13,6 +13,22 @@ Coming soon.
 
 ---
 
+## Screenshots
+
+### Homepage
+
+![Homepage](/public/readme/home.png)
+
+### Press System
+
+![Press](/public/readme/press.png)
+
+### Media Kit
+
+![Media Kit](/public/readme/media-kit.png)
+
+---
+
 ## ✨ Features
 
 - 🎨 Modern editorial-style layout

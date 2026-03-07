@@ -1,5 +1,4 @@
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 import CTASection from '@/components/home/CTASection';
 import MediaKitBio from '@/components/media-kit/MediaKitBio';
 import MediaKitDownloads from '@/components/media-kit/MediaKitDownloads';
@@ -17,7 +16,6 @@ export const metadata = buildSEO({
 export default function MediaKitPage() {
   return (
     <>
-      <Header />
       <main>
         <PageIntro
           eyebrow='Media Kit'
@@ -31,7 +29,7 @@ export default function MediaKitPage() {
         <MediaKitFacts />
         <CTASection />
       </main>
-      <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

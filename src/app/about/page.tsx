@@ -1,8 +1,7 @@
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import PageIntro from '@/components/shared/PageIntro';
 import { buildSEO } from '@/lib/seo';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 
 export const metadata = buildSEO({
   title: 'About | Antihero PR',
@@ -14,7 +13,6 @@ export const metadata = buildSEO({
 export default function AboutPage() {
   return (
     <>
-      <Header />
       <main>
         <PageIntro
           eyebrow='About'
@@ -69,7 +67,7 @@ export default function AboutPage() {
           </Container>
         </section>
       </main>
-      <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
