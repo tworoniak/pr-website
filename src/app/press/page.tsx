@@ -1,11 +1,10 @@
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import CTASection from '@/components/home/CTASection';
 import FeaturedCoverage from '@/components/press/FeaturedCoverage';
 import PressReleaseList from '@/components/press/PressReleaseList';
 import PressStats from '@/components/press/PressStats';
 import PageIntro from '@/components/shared/PageIntro';
 import { buildSEO } from '@/lib/seo';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 
 export const metadata = buildSEO({
   title: 'Press | Antihero PR',
@@ -17,7 +16,6 @@ export const metadata = buildSEO({
 export default function PressPage() {
   return (
     <>
-      <Header />
       <main>
         <PageIntro
           eyebrow='Press'
@@ -31,7 +29,7 @@ export default function PressPage() {
         <PressReleaseList />
         <CTASection />
       </main>
-      <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

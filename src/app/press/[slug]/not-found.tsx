@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+
 import Container from '@/components/layout/Container';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 
 export default function PressArticleNotFound() {
   return (
     <>
-      <Header />
       <main>
         <section className='pageSection'>
           <Container>
@@ -72,7 +71,7 @@ export default function PressArticleNotFound() {
           </Container>
         </section>
       </main>
-      <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

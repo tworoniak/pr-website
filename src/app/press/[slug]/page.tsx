@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import PressArticleNav from '@/components/press/PressArticleNav';
 import PageIntro from '@/components/shared/PageIntro';
@@ -12,6 +10,7 @@ import {
   pressReleases,
 } from '@/data/press';
 import styles from './PressDetailPage.module.scss';
+import ScrollToTopButton from '@/components/ui/ScrollToTopButton';
 
 type PressDetailPageProps = {
   params: Promise<{
@@ -67,7 +66,6 @@ export default async function PressDetailPage({
 
   return (
     <>
-      <Header />
       <main>
         <PageIntro
           eyebrow={`Press • ${article.date}`}
@@ -102,7 +100,7 @@ export default async function PressDetailPage({
 
         <PressArticleNav previous={previous} next={next} />
       </main>
-      <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

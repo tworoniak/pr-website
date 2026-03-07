@@ -1,7 +1,85 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 11, 16, 0.58);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    backdrop-filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.scrolled {
+  backdrop-filter: blur(16px);
+  background: rgba(11, 11, 16, 0.82);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    min-height: 76px;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
 .link {
   position: relative;
   display: inline-flex;
   align-items: center;
+  min-height: 76px;
   opacity: 0.82;
   transition:
     opacity 0.2s ease,
@@ -10,19 +88,40 @@
   &:hover {
     opacity: 1;
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.9rem;
+    height: 2px;
+    border-radius: 999px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
 }
 
 .active {
   opacity: 1;
+
+  &::after {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
-.active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.45rem;
-  height: 2px;
-  border-radius: 999px;
-  background: #fff;
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
+  .cta {
+    display: none;
+  }
 }

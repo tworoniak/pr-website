@@ -1,7 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import Container from './Container';
 import MobileMenu from './MobileMenu';
 import NavLink from './NavLink';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
 import styles from './Header.module.scss';
 
 const navItems = [
@@ -15,8 +18,10 @@ const navItems = [
 ];
 
 export default function Header() {
+  const isScrolled = useScrollPosition(40);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <Container className={styles.inner}>
         <Link href='/' className={styles.logo}>
           <span>ANTIHERO PR</span>
