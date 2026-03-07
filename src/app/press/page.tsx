@@ -5,6 +5,14 @@ import FeaturedCoverage from '@/components/press/FeaturedCoverage';
 import PressReleaseList from '@/components/press/PressReleaseList';
 import PressStats from '@/components/press/PressStats';
 import PageIntro from '@/components/shared/PageIntro';
+import { buildSEO } from '@/lib/seo';
+
+export const metadata = buildSEO({
+  title: 'Press | Antihero PR',
+  description:
+    'Public relations campaigns, artist positioning, media outreach, and strategic promotion for heavy music artists.',
+  path: '/press',
+});
 
 export default function PressPage() {
   return (

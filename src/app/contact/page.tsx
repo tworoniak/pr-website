@@ -3,6 +3,14 @@ import Footer from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import ContactForm from '@/components/contact/ContactForm';
 import PageIntro from '@/components/shared/PageIntro';
+import { buildSEO } from '@/lib/seo';
+
+export const metadata = buildSEO({
+  title: 'Contact | Antihero PR',
+  description:
+    'Get in touch with Antihero PR for public relations campaigns, artist positioning, media outreach, and strategic promotion for heavy music artists.',
+  path: '/contact',
+});
 
 export default function ContactPage() {
   return (

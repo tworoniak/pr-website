@@ -4,6 +4,14 @@ import Container from '@/components/layout/Container';
 import PageIntro from '@/components/shared/PageIntro';
 import ServiceCard from '@/components/services/ServiceCard';
 import { services } from '@/data/services';
+import { buildSEO } from '@/lib/seo';
+
+export const metadata = buildSEO({
+  title: 'Services | Antihero PR',
+  description:
+    'Public relations campaigns, artist positioning, media outreach, and strategic promotion for heavy music artists.',
+  path: '/services',
+});
 
 export default function ServicesPage() {
   return (
