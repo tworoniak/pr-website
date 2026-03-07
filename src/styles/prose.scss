@@ -1,0 +1,34 @@
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  h2,
+  h3 {
+    scroll-margin-top: 110px;
+  }
+
+  p + p {
+    margin-top: 1.2rem;
+  }
+
+  h2,
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  ul,
+  ol {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.25);
+    font-style: italic;
+  }
+}
