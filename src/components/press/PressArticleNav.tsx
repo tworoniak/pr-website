@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Container from '@/components/layout/Container';
-import type { PressReleaseItem } from '@/data/press';
+import type { PressArticleMeta } from '@/lib/press';
+import { formatDisplayDate } from '@/lib/format-date';
 import styles from './PressArticleNav.module.scss';
 
 type PressArticleNavProps = {
-  previous: PressReleaseItem | null;
-  next: PressReleaseItem | null;
+  previous: PressArticleMeta | null;
+  next: PressArticleMeta | null;
 };
 
 export default function PressArticleNav({
@@ -26,7 +27,7 @@ export default function PressArticleNav({
             <Link href={`/press/${previous.slug}`} className={styles.card}>
               <p className={styles.label}>Newer Article</p>
               <h3>{previous.title}</h3>
-              <span>{previous.date}</span>
+              <span>{formatDisplayDate(previous.date)}</span>
             </Link>
           ) : (
             <div className={`${styles.card} ${styles.empty}`}>
@@ -39,7 +40,7 @@ export default function PressArticleNav({
             <Link href={`/press/${next.slug}`} className={styles.card}>
               <p className={styles.label}>Older Article</p>
               <h3>{next.title}</h3>
-              <span>{next.date}</span>
+              <span>{formatDisplayDate(next.date)}</span>
             </Link>
           ) : (
             <div className={`${styles.card} ${styles.empty}`}>

@@ -1,30 +1,42 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/layout/Container';
-import { featuredCoverage } from '@/data/press';
+import { getAllPressArticles } from '@/lib/press';
+import { formatDisplayDate } from '@/lib/format-date';
 import styles from './FeaturedCoverage.module.scss';
 
 export default function FeaturedCoverage() {
+  const featured = getAllPressArticles().slice(0, 3);
+
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.heading}>
           <p className={styles.kicker}>Featured Coverage</p>
-          <h2>Selected placements, premieres, and campaign highlights.</h2>
+          <h2>Recent announcements and campaign highlights.</h2>
         </div>
 
         <div className={styles.grid}>
-          {featuredCoverage.map((item) => (
-            <article key={item.id} className={styles.card}>
-              <p className={styles.meta}>
-                <span>{item.outlet}</span>
-                <span>{item.type}</span>
-              </p>
+          {featured.map((item) => (
+            <article key={item.slug} className={styles.card}>
+              <div className={styles.imageWrap}>
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  sizes='(max-width: 900px) 100vw, 33vw'
+                />
+              </div>
 
-              <h3>{item.headline}</h3>
+              <div className={styles.content}>
+                <p className={styles.date}>{formatDisplayDate(item.date)}</p>
 
-              <Link href={item.href} className={styles.link}>
-                View coverage
-              </Link>
+                <h3>{item.title}</h3>
+
+                <p>{item.excerpt}</p>
+
+                <Link href={`/press/${item.slug}`}>Read article</Link>
+              </div>
             </article>
           ))}
         </div>

@@ -14,3 +14,28 @@
     object-fit: cover;
   }
 }
+
+.articleLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.articleBody {
+  min-width: 0;
+}
+
+.sidebar {
+  min-width: 0;
+}
+
+@media (max-width: 1000px) {
+  .articleLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+}
