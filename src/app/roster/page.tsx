@@ -4,6 +4,14 @@ import Container from '@/components/layout/Container';
 import PageIntro from '@/components/shared/PageIntro';
 import BandCard from '@/components/roster/BandCard';
 import { roster } from '@/data/roster';
+import { buildSEO } from '@/lib/seo';
+
+export const metadata = buildSEO({
+  title: 'Roster | Antihero PR',
+  description:
+    'Public relations campaigns, artist positioning, media outreach, and strategic promotion for heavy music artists.',
+  path: '/roster',
+});
 
 export default function RosterPage() {
   return (

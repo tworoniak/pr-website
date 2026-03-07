@@ -2,6 +2,14 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import PageIntro from '@/components/shared/PageIntro';
+import { buildSEO } from '@/lib/seo';
+
+export const metadata = buildSEO({
+  title: 'About | Antihero PR',
+  description:
+    'Public relations campaigns, artist positioning, media outreach, and strategic promotion for heavy music artists.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   return (

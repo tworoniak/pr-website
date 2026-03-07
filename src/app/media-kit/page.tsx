@@ -5,6 +5,14 @@ import MediaKitBio from '@/components/media-kit/MediaKitBio';
 import MediaKitDownloads from '@/components/media-kit/MediaKitDownloads';
 import MediaKitFacts from '@/components/media-kit/MediaKitFacts';
 import PageIntro from '@/components/shared/PageIntro';
+import { buildSEO } from '@/lib/seo';
+
+export const metadata = buildSEO({
+  title: 'Media Kit | Antihero PR',
+  description:
+    'Public relations campaigns, artist positioning, media outreach, and strategic promotion for heavy music artists.',
+  path: '/media-kit',
+});
 
 export default function MediaKitPage() {
   return (
